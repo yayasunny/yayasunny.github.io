@@ -1,0 +1,22 @@
+<table class="table">
+	<thead>
+		<tr>
+			<td>编号</td>
+			<td>栏目名称</td>
+			<td>序号</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="item in data.categorys">
+			<td><input type="checkbox" ng-model="item.checked"></td>
+			<td>{{item.name}}</td>
+			<td>{{item.cord}}</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="btn-group">
+	<button class="btn btn-primary">添加</button>
+	<button class="btn btn-primary">删除</button>
+	<button class="btn btn-primary">修改</button>
+</div>

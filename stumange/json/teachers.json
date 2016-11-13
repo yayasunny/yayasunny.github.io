@@ -1,0 +1,21 @@
+[{
+  "id":1001,
+  "name":"Ammey",
+  "gender":"男",
+  "rank":"部门总监",
+  "email":"22222.@qq.com",
+  "record":"美女",
+  "picture":"images/meme (1).jpg",
+  "salary":9000,
+  "daySalary":100
+},{
+  "id":1002,
+  "name":"Tom",
+  "gender":"男",
+  "rank":"教学总监",
+  "email":"liutao@163.com",
+  "record":"帅哥",
+  "picture":"images/meme (1).jpg",
+  "salary":8000,
+  "daySalary":80
+}]

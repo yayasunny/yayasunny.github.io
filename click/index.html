@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type"
+			content="text/html; charset=utf-8" />
+<title>HTML5 时钟</title>
+<script type="text/javascript">
+function Clock(ctx){
+	this.ctx = ctx;
+	this.drawOutline(100);
+	this.go();
+}
+/**
+ * 绘制时钟的轮廓
+ * @param r 表盘半径
+ */
+Clock.prototype.drawOutline = function(r){
+	this.ctx.strokeStyle = 'red';
+	this.ctx.font = "12pt Arial";
+	this.ctx.textBaseline  = 'top';
+	for(var i = 0; i < 60; i++){
+		var x = 200 + Math.sin(i/60*2*Math.PI)*r;
+		var y = 200 - Math.cos(i/60*2*Math.PI)*r;
+		if(i%5 == 0){
+			this.ctx.fillText(i != 0 ? i/5 : 12 , x - 10 , y - 10);
+		}
+	}
+	
+	
+}
+/**
+ * 绘制时钟的轮廓
+ * @param pointerOffset 指针偏移量
+ * @param pointerLength 指针长度
+ * @param pointerWidth 	指针宽度
+ */
+Clock.prototype.drawPointer = function(pointerOffset, pointerLength, pointerWidth){
+	this.ctx.save();
+	this.ctx.fillStyle = 'black';
+	this.ctx.lineWidth = pointerWidth || 1;
+	var x = 200 + Math.sin(pointerOffset*2*Math.PI)*pointerLength;
+	var y = 200 - Math.cos(pointerOffset*2*Math.PI)*pointerLength;
+	this.ctx.beginPath();
+	this.ctx.moveTo(200 , 200);
+	this.ctx.lineTo(x , y);
+	this.ctx.stroke();
+	this.ctx.restore();
+}
+/**
+ * 启动
+ */
+Clock.prototype.go = function(){
+	var me = this;
+	this.drawCurrentTime();
+	window.setInterval(function(){
+		me.drawCurrentTime();
+	}, 1000);
+}
+/**
+ * 绘制当前时间
+ */
+Clock.prototype.drawCurrentTime = function(){
+	this.ctx.fillStyle ='green';
+	this.ctx.beginPath();
+	this.ctx.arc(200, 200, 80, 0, 2*Math.PI, true); 
+	this.ctx.fill();
+	var date = new Date();
+	var h = date.getHours() > 12 ? date.getHours()-12 : date.getHours();
+	var m = date.getMinutes();
+	var s = date.getSeconds();
+	
+	this.drawPointer(h/12, 50, 4);
+	this.drawPointer(m/60, 60, 2);
+	this.drawPointer(s/60, 80);
+}
+function init(){
+	new Clock(document.getElementById('canvas').getContext('2d'));
+};
+</script>
+</head>
+<body onload = "init();">
+<canvas width="500" height="500" id="canvas">对不起，你的浏览器不支持HTML5</canvas>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<table class="table">
+	<thead>
+		<tr>
+			<td>编号</td>
+			<td>标题</td>
+			<td>发布时间</td>
+			<td>作者</td>
+			<td>点击次数</td>
+			<td>所属栏目</td>
+			<td>操作</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="item in data.cms">
+			<td><input type="checkbox" ng-model="item.checked"></td>
+			<td>{{item.title}}</td>
+			<td>{{item.time | date}}</td>
+			<td>{{item.author}}</td>
+			<td>{{item.clickTimes}}</td>
+			<td>{{item.category | idToName:categorys}}</td>
+			<td>
+			  <span class="badge">删除</span>
+			  <span class="badge">预览</span>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+
+<div class="btn-group">
+	<button class="btn btn-primary">审核通过</button>
+	<button class="btn btn-primary">审核失败</button>
+	<button class="btn btn-primary">推荐</button>
+</div>
