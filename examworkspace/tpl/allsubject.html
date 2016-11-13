@@ -1,0 +1,68 @@
+<div class="editingarea">
+    <div class="c_flex"><span class="c_flexible"></span></div>
+    <div class="c_editview">
+        <div class="c_condition">
+            <span><select><option>题干</option></select></span>
+            <span class="pl5 " ><input type="text"  ng-model="val"></span>
+            <span class="pl15 pr15 btn_gray " >查找</span>
+            <span class="icon_add"><em class="icon_r"><a href="#/addOne">单个添加题目</a></em></span>
+        </div>
+        <div class="divtable">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tablea">
+                <tr>
+                    <td align="center">方向</td>
+                    <td align="left">
+                        <div class="chose">
+                            <a href="#/allSubjects/a/0/b/{{params.b}}/c/{{params.c}}/d/{{params.d}}"  class="{{params.a==0?'active3':''}}" >全部</a>
+                            <a href="#/allSubjects/a/{{dep.id}}/b/{{params.b}}/c/{{params.c}}/d/{{params.d}}" ng-repeat="dep in deparments" value="{{dep.id}}" class={{params.a==dep.id?"active3":""}}>{{dep.name}}</a></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">难易程度</td>
+                    <td align="left">
+                        <div class="chose">
+                            <a href="#/allSubjects/a/{{params.a}}/b/0/c/{{params.c}}/d/{{params.d}}"  class="{{params.b==0?'active3':''}}"   >全部</a>
+                            <a href="#/allSubjects/a/{{params.a}}/b/{{lev.id}}/c/{{params.c}}/d/{{params.d}}" ng-repeat="lev in levels"  class="{{params.b==lev.id?'active3':''}}">{{lev.realName}}</a></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">知识点</td>
+                    <td align="left">
+                            <div class="chose">
+                                <a href="#/allSubjects/a/{{params.a}}/b/{{params.b}}/c/0/d/{{params.d}}"  class="{{params.c==0?'active3':''}}" >全部</a>
+                                <a href="#/allSubjects/a/{{params.a}}/b/{{params.b}}/c/{{top.id}}/d/{{params.d}}" ng-repeat="top in topics" class="{{params.c==top.id?'active3':''}}">{{top.title}}</a></div>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td align="center">题型</td>
+                    <td align="left">
+                        <div class="chose">
+                            <a href="#/allSubjects/a/{{params.a}}/b/{{params.b}}/c/{{params.c}}/d/0" class="{{params.d==0?'active3':''}}" >全部</a>
+                            <a href="#/allSubjects/a/{{params.a}}/b/{{params.b}}/c/{{params.c}}/d/{{typ.id}}" ng-repeat="typ in types" class="{{params.d==typ.id?'active3':''}}">{{typ.realName}}</a></div>
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+        <div class="Catalog">
+
+            <div class="Catalog_right">
+                <div class="Catalogtitle">总计<em>{{length}}</em>道题&nbsp;&nbsp;提示：单击体面可显示答案和解析&nbsp;&nbsp;<input type="checkbox" ng-model="answer" /><b>显示答案和解析</b>&nbsp;&nbsp;<a href="#" class="Thispage">本页全部试题加入试卷</a><div><i>1</i><a href="#" class="pageone">前</a><a href="#" class="pagetwo">后</a></div></div>
+                <div class="Catalog_rightnei" ng-repeat="sub in subjects">
+                    <div class="Catalogtitwo">题号：{{sub.id}}&nbsp;&nbsp;题型：{{sub.subjectType.realName}}&nbsp;&nbsp;难度：{{sub.subjectLevel.realName}}&nbsp;&nbsp;上传人：{{sub.user}}&nbsp;&nbsp;来源：{{sub.examPaper}}&nbsp;&nbsp;上传时间:{{sub.uploadTime}}&nbsp;&nbsp;组卷次数：<em>0</em></div>
+                    <div class="Catalogcontent">
+                        <div class="Catalogcontentup">题型&nbsp;&nbsp;&nbsp;&nbsp;{{sub.subjectType.realName}}<br><br>
+                           <h3>{{sub.stem}}</h3><br>
+                            <p ng-repeat="type in sub.choices" style="font-size: 18px;">{{type.no}}.{{type.content}}</p><br>
+                            <div style="font-size: 16px" ng-show="answer"><b>答案：</b>{{choice}}<br>{{sub.answer}}</div>
+                        </div>
+                        <div class="Catalogcontentdown"><a href="#/checkSubject/id/{{sub.id}}">审核通过</a><a href="#/checkSubjectTwo/id/{{sub.id}}" >审核不通过</a><a href="#">添加题目</a><a href="#/deleteSubject/id/{{sub.id}}">删除题目</a></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>

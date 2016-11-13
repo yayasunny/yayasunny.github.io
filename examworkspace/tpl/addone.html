@@ -1,0 +1,122 @@
+<div class="editingarea">
+    <div class="c_flex"><span class="c_flexible"></span></div>
+    <div class="Topictitle">添加题目</div>
+    <div class="c_editview">
+        <div class="Problem">
+            <div class="Attributetit">
+
+                <select ng-options=" typ.id as typ.realName for typ in types" ng-model="subject.type" clearn-history></select>
+                <select ng-options="lev.id as lev.realName for lev in levels" ng-model="subject.level"></select>
+                <select ng-options="dep.id as dep.name for dep in deparments" ng-model="subject.deparment"></select>
+                <select ng-options="top.id as top.title for top in topics|findTopic:subject.deparment" ng-model="subject.topic"></select>
+            </div>
+            <div class="Attributetit">题目题干</div>
+            <div class="Problemcontent">
+                <textarea cols="140" rows="3" ng-model="subject.stem"></textarea>
+            </div>
+        </div>
+        <!------------------单选---------------------------------->
+        <div class="Answeroptions" ng-show="subject.type==1?true:false">
+            <div class="Attributetit">答案选项<em>(通过勾选每个选项下面的框打开)</em></div>
+            <div class="c_condition"><span class="icon_add"><em class="icon_r" style="float: left">添加选项</em></span></div>
+            <div class="Answercontent">
+                <div class="Answerpart">
+                    <div class="Answerpart_left">
+                        <p>A</p><span><input type="radio" ng-model="val" get-input name="radio" value="0"/></span>
+                    </div>
+                    <div class="Answerpart_right">
+                        <textarea cols="50" rows="3" ng-model="subject.contents[0]"></textarea>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="Answerpart">
+                    <div class="Answerpart_left">
+                        <p>B</p><span><input type="radio" get-input name="radio" value="1"/></span>
+                    </div>
+                    <div class="Answerpart_right">
+                        <textarea cols="50" rows="3" ng-model="subject.contents[1]"></textarea>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="Answerpart">
+                    <div class="Answerpart_left">
+                        <p>C</p><span><input type="radio" get-input name="radio" value="2"/></span>
+                    </div>
+                    <div class="Answerpart_right">
+                        <textarea cols="50" rows="3" ng-model="contents[2]"></textarea>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="Answerpart">
+                    <div class="Answerpart_left">
+                        <p>D</p><span><input type="radio" get-input  name="radio" value="3"/></span>
+                    </div>
+                    <div class="Answerpart_right">
+                        <textarea cols="50" rows="3" ng-model="contents[3]"></textarea>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!--&#45;&#45;&#45;&#45多选;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+        <div class="Answeroptions" ng-show="subject.type==2?true:false">
+            <div class="Attributetit">答案选项<em>(通过勾选每个选项下面的框打开)</em></div>
+            <div class="c_condition"><span class="icon_add"><em class="icon_r" style="float: left">添加选项</em></span></div>
+            <div class="Answercontent">
+                <div class="Answerpart">
+                    <div class="Answerpart_left">
+                        <p>A</p><span><input type="checkbox" get-input name="check" value="0"/></span>
+                    </div>
+                    <div class="Answerpart_right">
+                        <textarea cols="50" rows="3" ng-model="subject.contents[0]"></textarea>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="Answerpart">
+                    <div class="Answerpart_left">
+                        <p>B</p><span><input type="checkbox" get-input name="check" value="1"/></span>
+                    </div>
+                    <div class="Answerpart_right">
+                        <textarea cols="50" rows="3" ng-model="subject.contents[1]"></textarea>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="Answerpart">
+                    <div class="Answerpart_left">
+                        <p>C</p><span><input type="checkbox" get-input name="check" value="2"/></span>
+                    </div>
+                    <div class="Answerpart_right">
+                        <textarea cols="50" rows="3" ng-model="subject.contents[2]"></textarea>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="Answerpart">
+                    <div class="Answerpart_left">
+                        <p>D</p><span><input type="checkbox" get-input name="check" value="3"/></span>
+                    </div>
+                    <div class="Answerpart_right">
+                        <textarea cols="50" rows="3" ng-model="subject.contents[3]"></textarea>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <!---------------------简答-------------------------------------------->
+        <div class="Problem" ng-show="subject.type==3?true:false">
+            <div class="Attributetit"><span>答案</span></div>
+            <div class="Problemcontent"><textarea cols="140" rows="4" ng-model="subject.answer"></textarea></div>
+        </div>
+        <div class="Problem">
+            <div class="Attributetit"><span>答案解析</span></div>
+            <div class="Problemcontent"><textarea cols="140" rows="4" ng-model="subject.analysis"></textarea></div>
+        </div>
+
+        <div class="btn_left">
+            <span class="btnL" ng-click="saveSubject()"><em class="btnR">保存并继续</em></span><span class="btnL" ng-click="saveBack()"><em class="btnR">保存并关闭</em></span>
+        </div>
+    </div>
+</div>
+</div>
