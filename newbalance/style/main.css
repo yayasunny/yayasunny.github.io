@@ -1,0 +1,231 @@
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;}
+body,p,h1,ul,li{
+	margin:0;
+	padding:0;}
+body{
+	color:#FFF;
+	font-size:14px;
+	font-family:"微软雅黑","宋体";
+	text-align:center;}
+img{
+	border-style:none;}
+a{
+	color:#FFF;
+	text-decoration:none;}
+a:hover{
+	color:#000}
+	/*测试header是固定的
+div{
+	height:300px;}
+	*/
+#header{
+	width:100%;
+	height:54px;
+	background-color:#000;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:200;}
+#logo{
+	width:149px;/*测试结果是需要的*/
+	/*height:54px;测试*/
+	/*background-color:red;测试*/
+	float:left;
+	margin-left:0;
+	margin-top:0;}
+#nav{
+	/*height:54px;测试内部li到时候再指定*/
+	/*width:330px;测试505-175=330*/
+	/*background-color:white;测试*/
+	float:left;
+	margin-top:0;
+	margin-left:25px;}
+#nav ul{
+	list-style-type:none;}
+#nav ul li{
+	/*width:70px;测试结果：不指定宽度更好看点*/
+	float:left;
+	padding:16px 30px;
+	text-align:center;}
+#nav ul li.last{
+	background: url(../images/ss.png) no-repeat left center;
+	padding-left:45px;
+	text-align:left;}
+#nav ul li:hover{
+	cursor:pointer;
+	background-color:#CCC;
+	color:#000;}
+#find{
+	height:54px;
+	width:110px;/*1340-1230*/
+	/*background-color:green;测试*/
+	float:right;
+	margin-top:0;
+	margin-right:5px;
+	background:url(../images/address.png) no-repeat left center;}
+#find a{
+	display:block;
+	margin-top:16px;}
+#find a:hover{
+	color:#FFF;}
+#search{
+	height:36px;
+	width:347px;/*背景图片的大小*/
+	background:url(../images/bg1.png) no-repeat left center;
+	/*background-color:red;测试*/
+	float:right;
+	margin-top:9;/*总高(54-36)/2*/
+	margin-right:40px;/*1230-1190*/}
+#search #inputtext{
+	width:250px;
+	height:30px;
+	float:left;
+	margin-top:3px;
+	margin-left:25px;
+	border:none;
+	background-color:#E7E7E7;
+	font-size:16px;
+	}
+#search #inputbtn{
+	float:left;
+	margin-top:3px;
+	margin-left:0;
+	border:none;}
+#ad{
+	min-width:1287px;/*默认100%，但可能会出现超过100%的情况，取值大小1287是自己屏幕的尺寸，js可以根据不同的屏幕识别出宽度来*/
+	/*height:525px;测试*/
+	background-color:#CCC;
+	text-align:center;}
+#adimg{
+	width:1287px;/*设置图片的尺寸与此一致*/
+	padding-top:54px;
+	height:471px;/*与图片的尺寸一致+header的fixed的高度*/
+	background-color:rgba(255,0,0,0.4);/*测试*/
+	margin:0 auto;
+	/*background-image:url(../images/ad.png);
+	background-repeat:no-repeat;
+	方法：二，直接这是背景和page的relative定位方式
+	*/
+	/*这是方法一，设置page是绝对与父亲定位，
+	但是这会导致父亲与header冲突覆盖，
+	原因：两者都是position定位，有自上而下代码的优先级显示，
+	所以这里这样设置：z-index*/
+	position:relative;
+	z-index:100;
+	
+	}
+#page{
+	height:20px;/*>= 圆cicle的直径15+边框2*2*/
+	width:120px;/*>=(圆circle的直径15+边框2*2+margin-left的10)*4
+				但是在放大和缩小浏览器的时候可能会导致比例失调而在下一行，
+				所以设置的时候稍微大点*/
+	/*background-color:green;测试*/
+	/*position:relative;*/
+	position:absolute;
+	top:480px;
+	left:633.5px;}
+.circle{
+	width:15px;
+	height:15px;
+	border-radius:7.5px;
+	border:2px solid #FFF;
+	float:left;
+	margin-top:0;
+	margin-left:10px;}
+div.active{
+	background-color:#FFF;}
+#conus{
+	width:300px;/*图片有点长*/
+	/*height:48px;测试*/
+	margin:12px auto;
+	/*background-color:yellow;测试*/
+	color:#000;}
+#main{
+	width:100%;
+	/*height:1500px;测试*/
+	background-color:#CCC;
+	text-align:center;}
+#center{
+	width:1095px;/*测试结果是有用的*/
+	/*height:1500px;测试*/
+	/*background-color:red;测试*/
+	margin:0 auto;}
+.product{
+	width:520px;
+	height:285px;
+	float:left;
+	margin-left:25px;
+	margin-bottom:25px;
+	/*background-color:yellow;测试*/}
+.bigproduct{
+	clear:both; 
+	width:1070px;
+	height:455px;
+	/*background-color:green;测试*/
+	margin-left:25px;}
+#footer{
+	/*background-color:#0FF;测试*/
+	color:#000;
+	text-align:center;}
+#help{
+	width:811px;/*0+170+27+170+27+320+27+70*/
+	/*background-color:red;测试*/
+	margin:80px auto;}
+#footer ul{
+	width:100%;
+	/*background-color:yellow;测试*/
+	list-style-type:none;
+	}
+#footer ul p{
+	margin:5px;}
+#footer ul li{
+	/*height:120px;测试*/
+	/*background-color:blue;测试*/
+	float:left;
+	margin-top:0;}
+#footer ul li.phone1{
+	width:170px;
+	margin-left:0;}
+#footer ul li.buy{
+	width:170px;
+	margin-left:27px;}
+#footer ul li.buy p{	
+	text-align:right;}
+#footer ul li.buy a{
+	color:#000;
+	display:block;}
+#footer ul li.buy a:hover{
+	color:#F00;}
+#footer ul li.phone2{
+	width:320px;
+	margin-left:27px;}
+#footer ul li.join{
+	width:70px;
+	margin-left:27px;}
+#cp{
+	width:811px;/*与上述的help高度保持一致，可以保证左对齐*/
+	/*background-color:red;测试*/
+	margin:0 auto;}
+/*#cp下的ul和li借用了help中的ul和li*/
+
+#return{
+	position:fixed;
+	bottom:10px;
+	right:10px;
+	background-color:#000;
+	color:#FFF;
+	font-size:50px;
+	width:72px;
+	height:72px;
+	border-radius:36px;}
+#return:hover{
+	cursor:pointer;
+	color:#CCC;
+	}
+#return a:hover{
+	cursor:pointer;
+	color:#CCC;
+	}

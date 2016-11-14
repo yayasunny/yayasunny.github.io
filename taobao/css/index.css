@@ -1,0 +1,329 @@
+/* CSS Document */
+*{
+	padding:0;
+	margin:0;}
+body{
+	margin:0;
+	padding:0;
+	font-family:"Î¢ÈíÑÅºÚ";
+	font-size:14px;}
+
+a{
+	text-decoration:none;
+	color:#000000;}
+#head{
+	width:100%;
+	height:50px;
+	background-color:RGB(245,245,245);;}
+#corner_l{
+	width:20%;
+	float:left;
+	margin-left:67px;
+	margin-top:20px;}
+#corner_r{
+	float:right;
+	margin-right:67px;
+	margin-top:20px;}
+#corner_l ul li{
+	display:inline-block;
+	}
+#corner_r ul li{
+	display:inline-block;
+	margin-left:10px;
+	}
+span{
+	color:RGB(255,68,0);}
+	
+#wrap{
+	width:90%;
+	margin:0 auto;
+	}
+#top{
+	width:100%;
+	height:150px;}
+#logo{
+	float:left;
+	margin-top:20px;}
+#biaodan{
+	float:left;
+	margin-left:10px;
+	width:710px;
+	height:100px;
+	margin-top:30px;
+	margin-left:150px;
+	}
+#search{
+	width:692px;
+	height:40px;
+	border:solid 2px RGB(255,68,0);
+	border-color:RGB(255,68,0);
+	}
+#xiala{
+	width:;
+	height:;
+	float:left;
+	padding:11px 20px;
+	background-color:RGB(246,246,246);
+	border-left:RGB(246,246,246);
+	border-top:RGB(246,246,246);
+	border-bottom:RGB(246,246,246);
+	
+	}
+#shuru{
+	width:73%;
+	height:36px;
+	border:none;}
+#sousuo{
+	width:93px;
+	height:40px;
+	background-color:RGB(255,68,0);
+	color:#FFFFFF;
+	border-top:RGB(255,68,0);
+	border-right:RGB(255,68,0);
+	border-bottom:RGB(255,68,0);
+	}
+#keyword{
+	margin-top:10px;
+	width:730px;}
+#keyword ul li{
+	display:inline-block;}
+#gengduo{
+	background-color:#FFFFFF;
+	border-color:#FFFFFF;
+	color:#000000;
+	border:none;}
+#left{
+	width:14%;
+	height:600px;
+	float:left;
+	border:1px solid #CCCCCC;
+	background-color:RGB(248,248,248);
+}
+#left ul li{
+	list-style:none;
+	width:110px;
+	padding-left:50px;
+	height:28px;
+	border-bottom:1px solid #CCCCCC;
+	padding-top:5px;
+	
+
+}
+#li1{
+	background-image:url(../images/taobao_18.png);
+	background-repeat:no-repeat;
+	position:0 -10px;}
+#li2{
+	background-image:url(../images/taobao_18.png);
+	background-repeat:no-repeat;
+	background-position:0 -35px;}
+#li3{
+	background-image:url(../images/taobao_18.png);
+	background-repeat:no-repeat;
+	background-position:0 -70px;}
+#li4{
+	background-image:url(../images/taobao_18.png);
+	background-repeat:no-repeat;
+	background-position:0 -105px;}
+#li5{
+	background-image:url(../images/taobao_18.png);
+	background-repeat:no-repeat;
+	background-position:0 -140px;}
+#li6{
+	background-image:url(../images/taobao_18.png);
+	background-repeat:no-repeat;
+	background-position:0 -175px;}
+#li7{
+	background-image:url(../images/taobao_18.png);
+	background-repeat:no-repeat;
+	background-position:0 -210px;}
+#li8{
+	background-image:url(../images/taobao_18.png);
+	background-repeat:no-repeat;
+	background-position:0 -245px;}
+#li9{
+	background-image:url(../images/taobao_18.png);
+	background-repeat:no-repeat;
+	background-position:0 -280px;}
+#li10{
+	background-image:url(../images/taobao_18.png);
+	background-repeat:no-repeat;
+	background-position:0 -315px;}
+	
+#li11{
+	background-image:url(../images/taobao_18.png);
+	background-repeat:no-repeat;
+	background-position:0 -350px;
+	}
+#li12{
+	background-image:url(../images/taobao_18.png);
+	background-repeat:no-repeat;
+	background-position:0 -385px;}
+#li13{
+	background-image:url(../images/taobao_18.png);
+	background-repeat:no-repeat;
+	background-position:0 -420px;}
+#li14{
+	background-image:url(../images/taobao_18.png);
+	background-repeat:no-repeat;
+	background-position:0 -455px;}
+#li15{
+	background-image:url(../images/taobao_18.png);
+	background-repeat:no-repeat;
+	background-position:0 -490px;}
+#li16{
+	background-image:url(../images/taobao_18.png);
+	background-repeat:no-repeat;
+	background-position:0 -525px;}
+#fenlei{
+    width:123px;
+	height:30px;
+	background-color:RGB(255,68,0);
+	color:#FFFFFF;
+	padding-left:40px;
+	padding-top:5px;}
+
+#center{
+	width:85%;
+	height:600px;
+	float:right;
+}
+#menue_row{
+	width:100%;
+	height:40px;
+	border-bottom:2px solid RGB(255,68,0);}
+#menue_row ul li{
+	display:inline-block;
+	padding:10px;}
+#menue_l{
+	width:20%;
+	height:40px;
+	float:left;}
+
+#menue_l ul li a{
+	color:RGB(255,68,0);
+	}
+#menue_r{
+	width:73%;
+	height:40px;
+	float:right;
+	}
+#xiaofei{
+	float:right;
+	margin-top:10px;
+	color:#000000;}
+#center_l{
+	width:68%;
+	height:550px;
+	float:left;
+	margin-top:10px;
+	
+	}
+.center_pho1{
+	width:67%;
+	height:49%;
+	float:left;
+	position:relative;
+	}
+.center_pho2{
+	width:27%;
+	height:49%;
+	float:right;
+	}
+.gundong{
+	width:200px;
+	height:10px;
+	/*background-color:#003366;*/
+	position:absolute;
+	top:240px;
+	left:50px;}
+.circle{
+	background-color:RGB(68,68,68);
+	width:16px;
+	height:16px;
+	border-radius:8px;
+	color:#FFFFFF;
+	font-weight:400;
+	font-size:9px;
+	float:left;
+	margin-left:10px;
+	line-height:2em;
+	text-align:center;}
+#center_r{
+	width:29%;
+	height:550px;
+	float:right;
+	margin-top:10px;}
+#c_r_top{
+	width:100%;
+	height:19%;
+	border:RGB(244,244,244) 1px solid;
+	}
+h4{
+	background-color:RGB(244,244,244);}
+#c_r_top ul li{
+	display:inline-block;
+	padding-top:8px;
+	margin-top:3px;
+	}
+#c_r_center{
+	
+	margin-top:10px;
+	border:1px solid RGB(247,247,247);
+	width:100%;
+	height:22%;}
+#lingbi{
+	float:left;
+	padding-top:10px;
+	padding:6px;
+	border:1px solid RGB(255,85,0);}
+#julebu{
+	float:left;
+	padding-top:13px;
+	padding:8px;
+	margin-left:10px;
+	border:1px solid RGB(255,85,0);}
+#lingbi a,#julebu a{
+	color:RGB(255,85,0);}
+.right_subimit{
+	clear:both;
+	color:#FFFFFF;
+	background-color:RGB(255,85,0);
+	margin-left:8px;
+	border:none;
+	width:29%;
+	height:35px;}
+#c_r_bottom{
+	margin-top:35px;
+	width:100%;
+	height:310px;
+	background-color:RGB(244,244,244);}
+.bianmin{
+	float:left;
+	width:20%;
+	height:67px;
+	color:RGB(255,85,0);
+	margin-left:8px;
+	margin-top:10px;
+	background-color:#FFFFFF;}
+#footer{
+	width:100%;
+	padding-top:25px;
+	}
+.bo_xuanze{
+	float:left;
+	margin-left:10px;
+
+	width:24%;
+	height:130px;
+	border-right:1px solid RGB(231,231,231); }
+.xuanze_fon{
+	float:left;
+	width:20%;
+	height:30px;
+	padding:5px;
+	padding-top:10px;}
+.bo_xuanze h4{
+	background-color:#FFFFFF;}
+
+	
